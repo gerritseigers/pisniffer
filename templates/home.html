@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the IoT Hub!</h1>
+    <p class="lead">This is a simple IoT Hub application.</p>
+    <hr class="my-4">
+    <button onclick="location.href='/edit_device'" class="btn btn-primary btn-lg">Edit</button>
+</div>
+{% endblock %}

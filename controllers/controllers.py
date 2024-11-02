@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, render_template_string
+from flask import Blueprint, jsonify, render_template_string, render_template
 from flask import request
 
 from models.model import Device
@@ -8,19 +8,22 @@ from session_config import session
 # Create a Blueprint for the controllers
 controllers = Blueprint('controllers', __name__)
 
-
 @controllers.route('/')
 def home():
-    # HTML template with an Edit button
-    html = '''
-    <html>
-        <body>
-            <h1>Welcome to the IoT Hub!</h1>
-            <button onclick="location.href='/edit_device'" type="button">Edit</button>
-        </body>
-    </html>
-    '''
-    return render_template_string(html)
+    return render_template('home.html')
+
+# @controllers.route('/')
+# def home():
+#     # HTML template with an Edit button
+#     html = '''
+#     <html>
+#         <body>
+#             <h1>Welcome to the IoT Hub!</h1>
+#             <button onclick="location.href='/edit_device'" type="button">Edit</button>
+#         </body>
+#     </html>
+#     '''
+#     return render_template_string(html)
 
 @controllers.route('/edit_device', methods=['GET', 'POST'])
 def edit_device():
