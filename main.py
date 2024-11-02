@@ -33,6 +33,7 @@ def start_measurement_thread():
     data_thread.start()
 
 def start_flask_thread():
+
     global flask_thread
 
     flask_thread = threading.Thread(target=run_flask_app)
@@ -90,11 +91,9 @@ def main():
         if not flask_thread.is_alive():
             logger.error("Flask thread has stopped. Restarting...")
             start_flask_thread()
-                    
+
         device = session.query(Device).filter_by(name="device1").first()
         time.sleep(device.send_interval)
-
-
 
 if __name__ == '__main__':
     main()
