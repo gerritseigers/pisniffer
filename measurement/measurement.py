@@ -13,7 +13,7 @@ def read_sensors(message_queue):
 
     while True:
         temperature = random.randint(20, 50)
-        logger.info(f"Temperature: {temperature}")
+        logger.error(f"Temperature: {temperature}")
 
         # Add the measurement to the database
         current_time = datetime.datetime.now()

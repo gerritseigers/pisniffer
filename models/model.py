@@ -1,6 +1,7 @@
 from sqlalchemy.orm import DeclarativeBase, relationship
-from sqlalchemy import Column, Integer, Float, Date, String
+from sqlalchemy import Column, Integer, Float, Date, String, Text, DateTime
 from sqlalchemy import ForeignKey 
+import datetime
 
 
 class Base(DeclarativeBase):
@@ -44,3 +45,11 @@ class Measurement(Base):
     date = Column(Date)
     device_id = Column(Integer, ForeignKey('devices.id'))
     device = relationship("Device", back_populates="measurements")
+
+# class LogRecord(Base):
+#     __tablename__ = 'logs'
+#     id = Column(Integer, primary_key=True)
+#     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
+#     name = Column(String)
+#     level = Column(String)
+#     message = Column(Text)
