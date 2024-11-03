@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Device{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Edit Device</h1>
+    <form method="post">
+        <div class="mb-3">
+            <label for="new_name" class="form-label">Device name:</label>
+            <input type="text" class="form-control" id="new_name" name="new_name" value="{{ device.name }}">
+        </div>
+        <div class="mb-3">
+            <label for="new_token" class="form-label">Token:</label>
+            <input type="text" class="form-control" id="new_token" name="new_token" value="{{ device.token }}">
+        </div>
+        <div class="mb-3">
+            <label for="new_measurement_interval" class="form-label">Measurement interval:</label>
+            <input type="text" class="form-control" id="new_measurement_interval" name="new_measurement_interval" value="{{ device.measurement_interval }}">
+        </div>
+        <div class="mb-3">
+            <label for="new_send_interval" class="form-label">Send interval:</label>
+            <input type="text" class="form-control" id="new_send_interval" name="new_send_interval" value="{{ device.send_interval }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

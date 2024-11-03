@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify, render_template_string, render_template
+from flask import redirect, url_for
 from flask import request
 
 from models.model import Device
@@ -10,7 +11,11 @@ controllers = Blueprint('controllers', __name__)
 
 @controllers.route('/')
 def home():
-    return render_template('home.html')
+    try:
+        return render_template('home.html')
+    except Exception as e:
+        logger.error(f"An error occurred while rendering the home page {e}")
+        return jsonify({"message": "An error occurred while rendering the home page"})
 
 # @controllers.route('/')
 # def home():
@@ -27,43 +32,12 @@ def home():
 
 @controllers.route('/edit_device', methods=['GET', 'POST'])
 def edit_device():
-
     device = session.query(Device).filter_by(name="device1").first()
-
     if request.method == 'POST':
-        # Handle the form submission to edit the device
-        name = request.form['new_name']
-        token = request.form['new_token']
-        measurement_interval = request.form['new_measurement_interval']
-        send_interval = request.form['new_send_interval']
-
-        device.name = name
-        device.token = token
-        device.measurement_interval = measurement_interval
-        device.send_interval = send_interval
-
-        # Update the device in the database (implement your logic here)
-        # ...
-        return jsonify({"message": "Device updated successfully"})
-    else:
-        # Render the edit device form
-        html = f'''
-        <html>
-            <body>
-            <h1>Edit Device</h1>
-            <form method="post">
-                <label for="new_name">Device name:</label><br>
-                <input type="text" id="new_name" name="new_name" value="{device.name}"><br><br>
-                <label for="new_token">Token:</label><br>
-                <input type="text" id="new_token" name="new_token" value="{device.token}"><br><br>
-                <label for="new_measurement_interval">Measurement interval:</label><br>
-                <input type="text" id="new_measurement_interval" name="new_measurement_interval" value="{device.measurement_interval}"><br><br>
-                <label for="new_send_interval">Send interval:</label><br>
-                <input type="text" id="new_send_interval" name="new_send_interval" value="{device.send_interval}"><br><br>
-                <input type="submit" value="Submit">
-            </form>
-            </body>
-        </html>
-        '''
-        return render_template_string(html)
-
+        device.name = request.form['new_name']
+        device.token = request.form['new_token']
+        device.measurement_interval = request.form['new_measurement_interval']
+        device.send_interval = request.form['new_send_interval']
+        session.commit()
+        return redirect(url_for('controllers.home'))
+    return render_template('edit_device.html', device=device)

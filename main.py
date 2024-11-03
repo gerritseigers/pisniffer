@@ -5,7 +5,9 @@ from measurement.measurement import read_sensors
 from models.model import Device
 from models.seed_database import seed_database
 from flask import Flask
+from flask_bootstrap import Bootstrap, Bootstrap5
 from controllers.controllers import controllers
+from shared import measurement_counter, increment_measurement_counter  # Import the shared variable and function
 import time
 import json
 import asyncio
@@ -19,8 +21,13 @@ connectionString = (
 message_queue = queue.Queue()
 
 app = Flask(__name__)
+Bootstrap5(app)
 app.register_blueprint(controllers)
 
+
+@app.context_processor
+def inject_measurement_counter():
+    return dict(measurement_counter=measurement_counter)
 
 def run_flask_app():
     app.run(host='0.0.0.0', port=5000)

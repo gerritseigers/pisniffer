@@ -4,13 +4,13 @@ from session_config import session
 from models.model import Device, Measurement
 import datetime
 import time
-
+from shared import increment_measurement_counter  # Import the shared function
 
 def read_sensors(message_queue):
 
     logger.info("Starting the data generation loop...")
     device = session.query(Device).filter_by(name="device1").first()
-
+    global measurement_counter  # Ensure the counter is global
 
     while True:
         try:
@@ -26,6 +26,7 @@ def read_sensors(message_queue):
                 device=device)
             session.add(measurement)
             session.commit()
+            increment_measurement_counter()  # Update the counter
 
             data = {
                 "device_id": f"{device.name}",
