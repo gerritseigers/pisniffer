@@ -7,7 +7,8 @@ from models.seed_database import seed_database
 from flask import Flask
 from flask_bootstrap import Bootstrap, Bootstrap5
 from controllers.controllers import controllers
-from shared import measurement_counter, increment_measurement_counter  # Import the shared variable and function
+from shared import measurement_counter, increment_measurement_counter, send_counter, increment_send_counter  # Import the shared variables and functions
+from shared import get_send_counter
 import time
 import json
 import asyncio
@@ -23,7 +24,6 @@ message_queue = queue.Queue()
 app = Flask(__name__)
 Bootstrap5(app)
 app.register_blueprint(controllers)
-
 
 @app.context_processor
 def inject_measurement_counter():
@@ -61,6 +61,8 @@ async def sendToIotHub(data):
         # Send the message
         await device_client.send_message(data)
         print("Message sent to IoT Hub:", data)
+        increment_send_counter()
+        logger.info(f"Send counter: {get_send_counter()}")
 
         # Shutdown the client
         await device_client.shutdown()

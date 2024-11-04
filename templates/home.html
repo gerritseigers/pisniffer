@@ -3,10 +3,79 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="jumbotron">
-    <h1 class="display-4">Welcome to the IoT Hub!</h1>
-    <p class="lead">This is a simple IoT Hub application.</p>
-    <hr class="my-4">
-    <button onclick="location.href='/edit_device'" class="btn btn-primary btn-lg">Edit</button>
+<div class="container mt-5">
+    <h1>IoT Hub Counters</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="device_name">Device name:</label>
+            <div id="device_name" class="value-box"></div>
+        </div>
+        <div class="col-md-4">
+            <label for="send_interval">Send Interval:</label>
+            <div id="send_interval" class="value-box">0</div>
+        </div>
+        <div class="col-md-4">
+            <label for="measurement_interval">Measurment interval:</label>
+            <div id="measurement_interval" class="value-box">0</div>
+        </div>
+        <div class="col-md-4">
+            <label for="send_counter">Send Counter:</label>
+            <div id="send_counter" class="value-box">0</div>
+        </div>
+        <div class="col-md-4">
+            <label for="measurement_counter">Measurement Counter:</label>
+            <div id="measurement_counter" class="value-box">0</div>
+        </div>
+    </row>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <label for="total_errors">Total Errors:</label>
+            <div id="total_errors" class="value-box">0</div>
+        </div>
+        <div class="col-md-4">
+            <label for="total_fatals">Total Fatals:</label>
+            <div id="total_fatals" class="value-box">0</div>
+        </div>
+        <div class="col-md-4">
+            <label for="total_warnings">Total Warnings:</label>
+            <div id="total_warnings" class="value-box">0</div>
+        </div>
+        <div class="col-md-4">
+            <label for="total_measurements">Total Measurements:</label>
+            <div id="total_measurements" class="value-box">0</div>
+        </div>
+    </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        function fetchCounters() {
+            $.ajax({
+                url: "/get_counters",
+                method: "GET",
+                success: function(data) {
+                    $("#device_name").text(data.device_name);
+                    $("#send_interval").text(data.send_interval);
+                    $("#measurement_interval").text(data.measurement_interval);
+                    $("#send_counter").text(data.send_counter);
+                    $("#measurement_counter").text(data.measurement_counter);
+                    $("#total_errors").text(data.total_errors);
+                    $("#total_fatals").text(data.total_fatals);
+                    $("#total_warnings").text(data.total_warnings);
+                    $("#total_measurements").text(data.total_measurements);
+                },
+                error: function(error) {
+                    console.error("Error fetching counters:", error);
+                }
+            });
+        }
+
+        // Fetch counters on page load
+        fetchCounters();
+
+        // Fetch counters every 5 seconds
+        setInterval(fetchCounters, 1000);
+    });
+</script>
 {% endblock %}
