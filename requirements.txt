@@ -3,3 +3,4 @@ sqlalchemy
 colorlog
 Flask
 bootstrap-flask
+adafruit-circuitpython-ads1X15

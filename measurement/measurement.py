@@ -4,6 +4,10 @@ from session_config import session
 from models.model import Device, Measurement
 import datetime
 import time
+import board
+import busio
+import adafruit_ads1x15.ads1115 as ADS
+from adafruit_ads1x15.analog_in import AnalogIn
 from shared import measurement_counter, increment_measurement_counter
 
 def read_sensors(message_queue):
@@ -12,16 +16,20 @@ def read_sensors(message_queue):
     device = session.query(Device).first()
     global measurement_counter  # Ensure the counter is global
 
+    i2c = busio.I2C(board.SCL, board.SDA)
+    ads = ADS.ADS1115(i2c)
+
     while True:
         try:
-            temperature = random.randint(20, 50)
-            logger.info(f"Temperature: {temperature}")
+
 
             # Add the measurement to the database
             current_time = datetime.datetime.now()
+            chan = AnalogIn(ads, ADS.P0)
+            logger.info(f"Channel 0: {chan.voltage}V")
 
             measurement = Measurement(
-                value=temperature, 
+                value=chan.voltage, 
                 date=current_time, 
                 device=device)
             session.add(measurement)
@@ -29,7 +37,7 @@ def read_sensors(message_queue):
 
             data = {
                 "device_id": f"{device.name}",
-                "temperature": temperature,
+                "temperature": chan.voltage,
                 "edge_time_stamp": f"{current_time}"
             }
 
