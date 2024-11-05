@@ -28,7 +28,7 @@ app.register_blueprint(controllers)
 
 # Set the log level to ERROR to suppress INFO level logs
 log = logging.getLogger('werkzeug')
-log.setLevel(logging.ERROR)
+log.setLevel(logging.INFO)
 
 @app.context_processor
 def inject_measurement_counter():

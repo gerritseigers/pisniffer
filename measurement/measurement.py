@@ -21,7 +21,9 @@ pulse_counter = 0
 
 def count_pulse(channel):
     global pulse_counter
-    pulse_counter+=1
+    pulse_counter += 1
+    if pulse_counter > 2147483647:  # Assuming 32-bit integer max value
+        pulse_counter = 0
 
 def read_sensors(message_queue):
     global pulse_counter
