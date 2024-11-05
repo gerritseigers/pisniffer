@@ -14,6 +14,7 @@ import json
 import asyncio
 import threading
 import queue
+import logging
 
 # Define connection string
 connectionString = (
@@ -24,6 +25,10 @@ message_queue = queue.Queue()
 app = Flask(__name__)
 Bootstrap5(app)
 app.register_blueprint(controllers)
+
+# Set the log level to ERROR to suppress INFO level logs
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
 
 @app.context_processor
 def inject_measurement_counter():
@@ -86,23 +91,33 @@ def main():
 
     device = session.query(Device).filter_by(name="device1").first()
 
-    while True:
-        if not message_queue.empty():
-            logger.warning("Sending data to IoT Hub")
-            while not message_queue.empty():
-                data = message_queue.get()
-                asyncio.run(sendToIotHub(data=json.dumps(data)))
+    try:
+        while True:
+            if not message_queue.empty():
+                logger.warning("Sending data to IoT Hub")
+                while not message_queue.empty():
+                    data = message_queue.get()
+                    asyncio.run(sendToIotHub(data=json.dumps(data)))
 
-        if not data_thread.is_alive():
-            logger.error("Data thread has stopped. Restarting...")
-            start_measurement_thread()
+            if not data_thread.is_alive():
+                logger.error("Data thread has stopped. Restarting...")
+                start_measurement_thread()
 
-        if not flask_thread.is_alive():
-            logger.error("Flask thread has stopped. Restarting...")
-            start_flask_thread()
+            if not flask_thread.is_alive():
+                logger.error("Flask thread has stopped. Restarting...")
+                start_flask_thread()
 
-        device = session.query(Device).filter_by(name="device1").first()
-        time.sleep(device.send_interval)
+            # Ensure the session is in a valid state before committing
+            if session.is_active:
+                session.commit()
+                device = session.query(Device).filter_by(name="device1").first()
+                time.sleep(device.send_interval)
+
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+        session.rollback()
+    finally:
+        session.close()
 
 if __name__ == '__main__':
     main()

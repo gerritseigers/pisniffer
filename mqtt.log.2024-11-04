@@ -1,0 +1,231 @@
+2024-11-04 16:40:18,526 - krc_logger - INFO - Configuring session...
+2024-11-04 16:40:18,617 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:40:18,622 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:40:18,626 - krc_logger - INFO - Seeding database if necessary...
+2024-11-04 16:40:18,630 - krc_logger - INFO - Temperature: 38
+2024-11-04 16:40:19,652 - krc_logger - INFO - Temperature: 36
+2024-11-04 16:40:20,662 - krc_logger - INFO - Temperature: 46
+2024-11-04 16:40:21,672 - krc_logger - INFO - Temperature: 48
+2024-11-04 16:40:22,683 - krc_logger - INFO - Temperature: 44
+2024-11-04 16:40:23,695 - krc_logger - INFO - Temperature: 34
+2024-11-04 16:40:24,706 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:40:25,717 - krc_logger - INFO - Temperature: 42
+2024-11-04 16:40:26,733 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:40:27,748 - krc_logger - INFO - Temperature: 29
+2024-11-04 16:40:28,758 - krc_logger - INFO - Temperature: 44
+2024-11-04 16:40:29,783 - krc_logger - INFO - Temperature: 29
+2024-11-04 16:40:30,811 - krc_logger - INFO - Temperature: 27
+2024-11-04 16:40:35,229 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:40:38,030 - krc_logger - INFO - Temperature: 38
+2024-11-04 16:40:39,132 - krc_logger - INFO - Temperature: 40
+2024-11-04 16:40:40,168 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:40:41,178 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:40:42,188 - krc_logger - INFO - Temperature: 21
+2024-11-04 16:40:43,211 - krc_logger - INFO - Temperature: 35
+2024-11-04 16:40:44,225 - krc_logger - INFO - Temperature: 20
+2024-11-04 16:40:45,239 - krc_logger - INFO - Temperature: 28
+2024-11-04 16:40:46,250 - krc_logger - INFO - Temperature: 41
+2024-11-04 16:40:47,266 - krc_logger - INFO - Temperature: 20
+2024-11-04 16:40:48,283 - krc_logger - INFO - Temperature: 20
+2024-11-04 16:40:49,298 - krc_logger - INFO - Temperature: 31
+2024-11-04 16:40:50,313 - krc_logger - INFO - Temperature: 34
+2024-11-04 16:40:51,326 - krc_logger - INFO - Temperature: 20
+2024-11-04 16:40:52,338 - krc_logger - INFO - Temperature: 50
+2024-11-04 16:40:53,349 - krc_logger - INFO - Temperature: 23
+2024-11-04 16:40:54,380 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:40:55,390 - krc_logger - INFO - Temperature: 45
+2024-11-04 16:40:56,400 - krc_logger - INFO - Temperature: 46
+2024-11-04 16:40:57,443 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:40:58,465 - krc_logger - INFO - Temperature: 45
+2024-11-04 16:40:59,482 - krc_logger - INFO - Temperature: 35
+2024-11-04 16:41:00,504 - krc_logger - INFO - Temperature: 36
+2024-11-04 16:41:01,520 - krc_logger - INFO - Temperature: 46
+2024-11-04 16:41:02,537 - krc_logger - INFO - Temperature: 38
+2024-11-04 16:41:03,555 - krc_logger - INFO - Temperature: 50
+2024-11-04 16:41:04,569 - krc_logger - INFO - Temperature: 20
+2024-11-04 16:41:05,589 - krc_logger - INFO - Temperature: 48
+2024-11-04 16:41:06,607 - krc_logger - INFO - Temperature: 49
+2024-11-04 16:41:07,799 - krc_logger - INFO - Temperature: 36
+2024-11-04 16:41:08,809 - krc_logger - INFO - Temperature: 31
+2024-11-04 16:41:09,820 - krc_logger - INFO - Temperature: 46
+2024-11-04 16:41:10,832 - krc_logger - INFO - Temperature: 32
+2024-11-04 16:41:11,843 - krc_logger - INFO - Temperature: 25
+2024-11-04 16:41:12,952 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:41:13,962 - krc_logger - INFO - Temperature: 37
+2024-11-04 16:41:14,973 - krc_logger - INFO - Temperature: 42
+2024-11-04 16:41:15,983 - krc_logger - INFO - Temperature: 40
+2024-11-04 16:41:16,993 - krc_logger - INFO - Temperature: 45
+2024-11-04 16:41:19,415 - krc_logger - INFO - Temperature: 36
+2024-11-04 16:41:20,607 - krc_logger - INFO - Temperature: 40
+2024-11-04 16:41:21,721 - krc_logger - INFO - Temperature: 31
+2024-11-04 16:41:22,835 - krc_logger - INFO - Temperature: 49
+2024-11-04 16:41:23,862 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:41:24,874 - krc_logger - INFO - Temperature: 35
+2024-11-04 16:41:25,887 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:41:26,898 - krc_logger - INFO - Temperature: 21
+2024-11-04 16:41:27,909 - krc_logger - INFO - Temperature: 25
+2024-11-04 16:43:01,523 - krc_logger - INFO - Configuring session...
+2024-11-04 16:43:01,608 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:43:01,613 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:43:01,617 - krc_logger - INFO - Seeding database if necessary...
+2024-11-04 16:43:01,621 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:43:02,642 - krc_logger - INFO - Temperature: 36
+2024-11-04 16:43:03,654 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:43:04,664 - krc_logger - INFO - Temperature: 50
+2024-11-04 16:43:05,674 - krc_logger - INFO - Temperature: 50
+2024-11-04 16:43:06,689 - krc_logger - INFO - Temperature: 27
+2024-11-04 16:43:07,703 - krc_logger - INFO - Temperature: 40
+2024-11-04 16:43:08,727 - krc_logger - INFO - Temperature: 35
+2024-11-04 16:43:09,757 - krc_logger - INFO - Temperature: 25
+2024-11-04 16:43:10,779 - krc_logger - INFO - Temperature: 46
+2024-11-04 16:43:11,790 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:43:12,811 - krc_logger - INFO - Temperature: 30
+2024-11-04 16:43:13,821 - krc_logger - INFO - Temperature: 22
+2024-11-04 16:43:14,832 - krc_logger - INFO - Temperature: 30
+2024-11-04 16:43:15,844 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:43:16,855 - krc_logger - INFO - Temperature: 27
+2024-11-04 16:43:17,882 - krc_logger - INFO - Temperature: 48
+2024-11-04 16:43:18,901 - krc_logger - INFO - Temperature: 21
+2024-11-04 16:43:19,912 - krc_logger - INFO - Temperature: 45
+2024-11-04 16:43:20,922 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:43:21,936 - krc_logger - INFO - Temperature: 31
+2024-11-04 16:43:22,947 - krc_logger - INFO - Temperature: 45
+2024-11-04 16:43:27,971 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:43:32,982 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:43:37,998 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:43:43,009 - krc_logger - INFO - Temperature: 42
+2024-11-04 16:43:48,028 - krc_logger - INFO - Temperature: 45
+2024-11-04 16:43:53,040 - krc_logger - INFO - Temperature: 25
+2024-11-04 16:43:58,156 - krc_logger - INFO - Temperature: 28
+2024-11-04 16:44:03,176 - krc_logger - INFO - Temperature: 30
+2024-11-04 16:44:08,199 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:44:13,371 - krc_logger - INFO - Temperature: 25
+2024-11-04 16:44:18,385 - krc_logger - INFO - Temperature: 48
+2024-11-04 16:44:23,407 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:44:28,419 - krc_logger - INFO - Temperature: 25
+2024-11-04 16:44:33,432 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:44:38,445 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:44:44,913 - krc_logger - INFO - Temperature: 35
+2024-11-04 16:44:49,974 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:44:54,987 - krc_logger - INFO - Temperature: 31
+2024-11-04 16:45:00,025 - krc_logger - INFO - Temperature: 40
+2024-11-04 16:45:05,038 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:45:10,050 - krc_logger - INFO - Temperature: 29
+2024-11-04 16:45:15,064 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:45:20,081 - krc_logger - INFO - Temperature: 49
+2024-11-04 16:45:25,098 - krc_logger - INFO - Temperature: 46
+2024-11-04 16:45:30,139 - krc_logger - INFO - Temperature: 41
+2024-11-04 16:45:35,157 - krc_logger - INFO - Temperature: 49
+2024-11-04 16:45:40,183 - krc_logger - INFO - Temperature: 32
+2024-11-04 16:49:16,351 - krc_logger - INFO - Configuring session...
+2024-11-04 16:49:16,557 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:49:16,558 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:49:16,565 - krc_logger - INFO - Seeding database if necessary...
+2024-11-04 16:49:16,679 - krc_logger - INFO - Temperature: 20
+2024-11-04 16:49:33,268 - krc_logger - INFO - Configuring session...
+2024-11-04 16:49:33,534 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:49:33,535 - krc_logger - INFO - Seeding database if necessary...
+2024-11-04 16:49:33,536 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:49:33,600 - krc_logger - INFO - Temperature: 32
+2024-11-04 16:49:35,721 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:49:37,738 - krc_logger - INFO - Temperature: 34
+2024-11-04 16:49:39,758 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:49:41,787 - krc_logger - INFO - Temperature: 47
+2024-11-04 16:49:43,621 - krc_logger - WARNING - Sending data to IoT Hub
+2024-11-04 16:49:43,809 - krc_logger - INFO - Temperature: 44
+2024-11-04 16:49:44,039 - krc_logger - INFO - Send counter: 1
+2024-11-04 16:49:44,397 - krc_logger - INFO - Send counter: 2
+2024-11-04 16:49:44,777 - krc_logger - INFO - Send counter: 3
+2024-11-04 16:49:45,238 - krc_logger - INFO - Send counter: 4
+2024-11-04 16:49:45,595 - krc_logger - INFO - Send counter: 5
+2024-11-04 16:49:45,832 - krc_logger - INFO - Temperature: 29
+2024-11-04 16:49:45,922 - krc_logger - INFO - Send counter: 6
+2024-11-04 16:49:46,303 - krc_logger - INFO - Send counter: 7
+2024-11-04 16:49:47,852 - krc_logger - INFO - Temperature: 22
+2024-11-04 16:49:49,939 - krc_logger - INFO - Temperature: 36
+2024-11-04 16:49:51,962 - krc_logger - INFO - Temperature: 37
+2024-11-04 16:49:53,982 - krc_logger - INFO - Temperature: 39
+2024-11-04 16:49:56,011 - krc_logger - INFO - Temperature: 28
+2024-11-04 16:49:56,318 - krc_logger - WARNING - Sending data to IoT Hub
+2024-11-04 16:49:56,706 - krc_logger - INFO - Send counter: 8
+2024-11-04 16:49:57,040 - krc_logger - INFO - Send counter: 9
+2024-11-04 16:49:57,460 - krc_logger - INFO - Send counter: 10
+2024-11-04 16:49:57,782 - krc_logger - INFO - Send counter: 11
+2024-11-04 16:49:58,032 - krc_logger - INFO - Temperature: 26
+2024-11-04 16:49:58,123 - krc_logger - INFO - Send counter: 12
+2024-11-04 16:49:58,440 - krc_logger - INFO - Send counter: 13
+2024-11-04 16:50:00,068 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:50:02,092 - krc_logger - INFO - Temperature: 49
+2024-11-04 16:50:09,288 - krc_logger - INFO - Configuring session...
+2024-11-04 16:50:09,542 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:50:09,544 - krc_logger - INFO - Starting the data generation loop...
+2024-11-04 16:50:09,566 - krc_logger - INFO - Seeding database if necessary...
+2024-11-04 16:50:09,594 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:50:11,654 - krc_logger - INFO - Temperature: 48
+2024-11-04 16:50:13,671 - krc_logger - INFO - Temperature: 44
+2024-11-04 16:50:15,690 - krc_logger - INFO - Temperature: 48
+2024-11-04 16:50:17,713 - krc_logger - INFO - Temperature: 40
+2024-11-04 16:50:19,620 - krc_logger - WARNING - Sending data to IoT Hub
+2024-11-04 16:50:19,733 - krc_logger - INFO - Temperature: 38
+2024-11-04 16:50:20,034 - krc_logger - INFO - Send counter: 1
+2024-11-04 16:50:20,482 - krc_logger - INFO - Send counter: 2
+2024-11-04 16:50:20,845 - krc_logger - INFO - Send counter: 3
+2024-11-04 16:50:21,265 - krc_logger - INFO - Send counter: 4
+2024-11-04 16:50:21,703 - krc_logger - INFO - Send counter: 5
+2024-11-04 16:50:21,763 - krc_logger - INFO - Temperature: 48
+2024-11-04 16:50:22,055 - krc_logger - INFO - Send counter: 6
+2024-11-04 16:50:22,549 - krc_logger - INFO - Send counter: 7
+2024-11-04 16:50:23,794 - krc_logger - INFO - Temperature: 41
+2024-11-04 16:50:25,829 - krc_logger - INFO - Temperature: 20
+2024-11-04 16:50:27,852 - krc_logger - INFO - Temperature: 45
+2024-11-04 16:50:29,877 - krc_logger - INFO - Temperature: 42
+2024-11-04 16:50:31,906 - krc_logger - INFO - Temperature: 28
+2024-11-04 16:50:32,573 - krc_logger - WARNING - Sending data to IoT Hub
+2024-11-04 16:50:32,925 - krc_logger - INFO - Send counter: 8
+2024-11-04 16:50:33,250 - krc_logger - INFO - Send counter: 9
+2024-11-04 16:50:33,684 - krc_logger - INFO - Send counter: 10
+2024-11-04 16:50:33,932 - krc_logger - INFO - Temperature: 25
+2024-11-04 16:50:34,022 - krc_logger - INFO - Send counter: 11
+2024-11-04 16:50:34,334 - krc_logger - INFO - Send counter: 12
+2024-11-04 16:50:34,714 - krc_logger - INFO - Send counter: 13
+2024-11-04 16:50:35,955 - krc_logger - INFO - Temperature: 35
+2024-11-04 16:50:37,987 - krc_logger - INFO - Temperature: 24
+2024-11-04 16:50:40,020 - krc_logger - INFO - Temperature: 40
+2024-11-04 16:50:42,059 - krc_logger - INFO - Temperature: 22
+2024-11-04 16:50:44,088 - krc_logger - INFO - Temperature: 27
+2024-11-04 16:50:44,729 - krc_logger - WARNING - Sending data to IoT Hub
+2024-11-04 16:50:45,038 - krc_logger - INFO - Send counter: 14
+2024-11-04 16:50:45,372 - krc_logger - INFO - Send counter: 15
+2024-11-04 16:50:45,747 - krc_logger - INFO - Send counter: 16
+2024-11-04 16:50:46,101 - krc_logger - INFO - Send counter: 17
+2024-11-04 16:50:46,122 - krc_logger - INFO - Temperature: 41
+2024-11-04 16:50:46,478 - krc_logger - INFO - Send counter: 18
+2024-11-04 16:50:46,865 - krc_logger - INFO - Send counter: 19
+2024-11-04 16:50:48,160 - krc_logger - INFO - Temperature: 50
+2024-11-04 16:50:50,187 - krc_logger - INFO - Temperature: 35
+2024-11-04 16:50:52,216 - krc_logger - INFO - Temperature: 39
+2024-11-04 16:50:54,257 - krc_logger - INFO - Temperature: 47
+2024-11-04 16:50:56,283 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:50:56,882 - krc_logger - WARNING - Sending data to IoT Hub
+2024-11-04 16:50:57,264 - krc_logger - INFO - Send counter: 20
+2024-11-04 16:50:57,706 - krc_logger - INFO - Send counter: 21
+2024-11-04 16:50:58,087 - krc_logger - INFO - Send counter: 22
+2024-11-04 16:50:58,313 - krc_logger - INFO - Temperature: 42
+2024-11-04 16:50:58,467 - krc_logger - INFO - Send counter: 23
+2024-11-04 16:50:58,818 - krc_logger - INFO - Send counter: 24
+2024-11-04 16:50:59,192 - krc_logger - INFO - Send counter: 25
+2024-11-04 16:51:00,339 - krc_logger - INFO - Temperature: 38
+2024-11-04 16:51:02,368 - krc_logger - INFO - Temperature: 33
+2024-11-04 16:51:04,399 - krc_logger - INFO - Temperature: 46
+2024-11-04 16:51:06,428 - krc_logger - INFO - Temperature: 43
+2024-11-04 16:51:06,437 - krc_logger - ERROR - An error occurred while fetching the counters This session is in 'prepared' state; no further SQL can be emitted within this transaction.
+2024-11-04 16:51:08,541 - krc_logger - INFO - Temperature: 30
+2024-11-04 16:51:09,213 - krc_logger - WARNING - Sending data to IoT Hub
+2024-11-04 16:51:09,636 - krc_logger - INFO - Send counter: 26
+2024-11-04 16:51:09,996 - krc_logger - INFO - Send counter: 27
+2024-11-04 16:51:10,343 - krc_logger - INFO - Send counter: 28
+2024-11-04 16:51:10,572 - krc_logger - INFO - Temperature: 38
+2024-11-04 16:51:10,718 - krc_logger - INFO - Send counter: 29
+2024-11-04 16:51:11,052 - krc_logger - INFO - Send counter: 30
+2024-11-04 16:51:11,418 - krc_logger - INFO - Send counter: 31
+2024-11-04 16:51:12,623 - krc_logger - INFO - Temperature: 49
