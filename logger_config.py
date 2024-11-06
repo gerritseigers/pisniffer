@@ -57,9 +57,9 @@ def configure_logger():
     console_handler = logging.StreamHandler()
 
     # Create database handler
-    db_handler = DatabaseLogHandler(DATABASE_CONNECTION_STRING)
-    db_handler.setLevel(logging.WARNING)
-    db_handler.addFilter(WarningErrorCriticalFilter())
+    # db_handler = DatabaseLogHandler(DATABASE_CONNECTION_STRING)
+    # db_handler.setLevel(logging.WARNING)
+    # db_handler.addFilter(WarningErrorCriticalFilter())
 
     # Create formatter
     formatter = logging.Formatter(
@@ -81,12 +81,12 @@ def configure_logger():
     # Add formatter to handlers
     file_handler.setFormatter(formatter)
     console_handler.setFormatter(console_formatter)
-    db_handler.setFormatter(formatter)
+    # db_handler.setFormatter(formatter)
 
     # Add handlers to logger
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
-    logger.addHandler(db_handler)
+    # logger.addHandler(db_handler)
 
     return logger
 

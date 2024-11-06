@@ -8,7 +8,7 @@ def seed_database():
         token="qTh81ZkJbgyLvbkcaWPpdGX6QR4neloJqOTdnsXho3g=",
         endpoint="gs-demo-iothub.azure-devices.net",
         location="room1",
-        measurement_interval=5,
-        send_interval=60)
+        measurement_interval=2,
+        send_interval=10)
     session.add(device)
     session.commit()

@@ -30,6 +30,9 @@ app.register_blueprint(controllers)
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.INFO)
 
+# Create an empty list to store messages that must be send to the IoT Hub
+messages = []
+
 @app.context_processor
 def inject_measurement_counter():
     return dict(measurement_counter=measurement_counter)
@@ -94,10 +97,15 @@ def main():
     try:
         while True:
             if not message_queue.empty():
-                logger.warning("Sending data to IoT Hub")
+                logger.warning("There is data in the queue")
                 while not message_queue.empty():
                     data = message_queue.get()
-                    asyncio.run(sendToIotHub(data=json.dumps(data)))
+                    messages.append(data)
+
+                    if len(messages) > device.send_interval:
+                        logger.info("Sending data to IoT Hub")  
+                        asyncio.run(sendToIotHub(data=json.dumps(messages)))
+                        messages.clear()
 
             if not data_thread.is_alive():
                 logger.error("Data thread has stopped. Restarting...")
@@ -111,7 +119,8 @@ def main():
             if session.is_active:
                 session.commit()
                 device = session.query(Device).filter_by(name="device1").first()
-                time.sleep(device.send_interval)
+
+            time.sleep(1)
 
     except Exception as e:
         logger.error(f"An error occurred: {e}")

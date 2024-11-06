@@ -7,7 +7,7 @@ from config import DATABASE_CONNECTION_STRING
 def configure_session():
 
     logger.info("Configuring session...")
-    connection = "sqlite+pysqlite:///demo.db"
+    connection = "sqlite+pysqlite:///snifferPi.db"
     engine = create_engine(DATABASE_CONNECTION_STRING, echo=False)
     Base.metadata.create_all(engine)
 
